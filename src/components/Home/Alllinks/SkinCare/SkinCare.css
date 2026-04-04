@@ -1,0 +1,13 @@
+
+@media (max-width:650px) {
+    .h-h {
+      min-height: 53vh !important;
+      height: auto;
+    }
+    
+}
+@media (min-height: 1000px) {
+  .h-h {
+    min-height: auto;
+  }
+}

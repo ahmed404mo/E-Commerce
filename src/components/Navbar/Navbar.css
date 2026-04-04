@@ -1,0 +1,178 @@
+/* الحاوية الرئيسية */
+.cont {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 85px; /* ارتفاع ثابت وموحد */
+  background-color: white;
+  z-index: 10000 !important; /* أعلى من كل شيء */
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.contNav {
+  display: flex;
+  max-width: 1250px;
+  height: 100%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: white;
+}
+
+/* اللوجو والبحث */
+.partone {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.logo {
+  font-size: 30px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #333;
+}
+.dcolor {
+  color: #5f48f9;
+}
+
+.search {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.insearch {
+  background-color: #f1f3f6;
+  border: none;
+  padding: 10px 15px 10px 40px;
+  border-radius: 30px;
+  width: 260px;
+  transition: 0.3s;
+  outline: none;
+}
+.insearch:focus {
+  width: 320px;
+  background-color: #fff;
+  box-shadow: 0 0 0 2px #5f48f933;
+}
+.aftinp {
+  position: absolute;
+  left: 15px;
+  color: #888;
+}
+
+/* الروابط في الديسكتوب */
+.sings {
+  display: flex;
+  gap: 8px;
+}
+.btntwo {
+  padding: 10px 18px;
+  border-radius: 10px;
+  color: #444;
+  text-decoration: none;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  transition: 0.3s;
+}
+.btntwo:hover {
+  background-color: #f5f5f5;
+}
+.activeLink {
+  background-color: #5f48f9 !important;
+  color: white !important;
+}
+
+/* أيقونة الموبايل */
+.list {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.listII {
+  position: fixed;
+  top: 10%; 
+  left: 0;
+  width: 100%;
+  background-color: white;
+  z-index: -1; 
+  padding: 20px 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+  transform: translateY(-120%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.listII.move {
+  transform: translateY(0); 
+}
+
+.searchII {
+  position: relative;
+  padding: 0 20px;
+  margin-bottom: 15px;
+}
+.searchII .insearch {
+  width: 100%;
+  padding-right: 60px;
+}
+.btt {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #5f48f9;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  color: white;
+}
+
+/* روابط الموبايل */
+.linking {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+.space {
+  margin: 8px 0;
+  width: 100% !important;
+}
+
+.divcover.setCover {
+  position: fixed;
+  top: 85px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -2;
+}
+
+.listII {
+  z-index: -1;
+}
+
+.rotute {
+  transform: rotate(90deg);
+  color: #5f48f9;
+}
+
+@media (max-width: 1150px) {
+  .sings,
+  .search {
+    display: none;
+  }
+  .list {
+    display: block;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo {
+    font-size: 22px;
+  }
+}

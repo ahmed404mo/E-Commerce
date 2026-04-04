@@ -1,0 +1,20 @@
+/* Message */
+.message {
+    top: 70px;
+    position: fixed;
+    display: flex;
+    z-index: 9999999999999999;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+    color: white;
+    font-weight: 900;
+    padding: 10px;
+}
+.error{
+    background-color: crimson;
+}
+.success{
+    background-color: rebeccapurple;
+    
+}

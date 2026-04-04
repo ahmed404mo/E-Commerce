@@ -1,0 +1,142 @@
+.contHome{
+    margin: 20px auto;
+    margin-top:158px;
+    max-width: 1200px;
+    /* display: flex
+; */
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+}
+
+.lininHome{
+    z-index: 999999999;
+
+    list-style: none;
+    display: flex ;
+    gap: 25px;
+    flex-wrap: wrap;
+    position: fixed;
+    background-color:white;
+    /* width: 100%; */
+    justify-content: center;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    top:8.5%;
+    /* max-width: 1200px; */
+    padding: 10px 0;
+}
+.contHome{
+    /* height: 100vh; */
+}
+
+.lininHome-lis{
+    font-size: 12px;
+    text-decoration: none;
+    background-color: #e1dede;
+    color: black;
+    padding: 10px 20px;
+    /* border-radius: 10px; */
+    margin: 10px 0;
+}
+.lininHome-lis:hover{
+    background-color: #7763f7;
+    color: white;
+}
+.lininHome-lis.active {
+    background-color: #5f48f9;
+    color: white;
+}
+.styleIconHome{
+        padding: 10px 20px;
+    background-color: #5f48f9;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+}
+.lininHomeFix{
+    position: relative;
+    
+}
+.lininHome{
+    overflow: hidden;
+    margin: 0 10px;
+    width: 100%;
+}
+.dom{
+    position: relative;
+}
+.slidna{
+    position: absolute;
+    transform: rotate(90deg);
+    bottom: 0;
+    padding: 0px;
+    z-index: 3;
+    border-radius: 10px;
+    right: 2px;
+    animation: mm 1s linear infinite;
+}
+
+@keyframes mm {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
+
+.splide__slide img{
+	/* width: 100% !important; */
+} 
+.lininHome .splide__list{
+    justify-content: space-around !important;
+    
+}
+.lininHome .splide__slide{
+    width: auto !important;
+    /* margin:  5px  0  !important; */
+    gap: 10px;
+}
+
+@media (max-width:768px) {
+    .contWidth {
+      min-height: 83vh;
+      height: auto;
+    }
+}
+@media (min-height: 1000px) {
+  .contWidth {
+    min-height: auto;
+  }
+}
+
+
+
+
+@media (max-width:768px) {
+    .lininHome{
+       width: auto;
+        padding: 10px;
+        margin: 0;
+    }
+    .cont{
+        height: 100px;
+    }
+    .contHome{
+        margin-top:130px;
+    }
+}
+@media (max-width:545px) {
+    .lininHome{
+        /* top:9.5%; */
+        padding: 10px;
+        margin: 0;
+    }
+    .contHome{
+        margin-top:150px;
+    }
+}

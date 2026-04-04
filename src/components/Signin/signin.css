@@ -1,0 +1,109 @@
+.contSignIn{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    align-items: center;
+    height: calc(100vh - 60px);
+    margin-top: 100px;
+}
+.listSign{
+    width: 50%;
+}
+.listInpt{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.marginBetween{
+    margin:10px  0  40px;
+}
+.bord{
+    border: none;
+    background-color: #f5f4f9;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+.bord:focus{
+    outline: none;
+}
+.pFont{
+        font-size: 14px;
+    color: #cccccc;
+}
+.font{
+    color: #b1b1b1;
+    font-weight: 500;
+    font-size: 17px
+}
+.changeSpace{
+        font-size: 12px;
+    margin-top: 15px;
+}
+.loginbtn{
+        border: none;
+    padding: 10px;
+    background-color: #5f48f9;
+    color: white;
+    font-weight: 700;
+    border-radius: 6px;
+    width: 25%;
+}
+.spancolorEnCore{
+    background-color: #dbfacf;
+    margin-top: 0 !important;
+    font-size: small;
+    padding: 2px 10px;
+    color: rgb(0, 255, 13);
+    width: 100%;
+}
+.spancolorCore{
+    background-color: #f7dfdf;
+    margin-top: 0 !important;
+    font-size: small;
+    padding: 2px 10px;
+    width: 100%;
+    color: rgb(255, 0, 0);
+}
+.topone{
+    position: absolute;
+    top: 23%;
+    border-radius: 0px 0px 6px 6px;
+}
+.toptwo{
+    position: absolute;
+    top: 58%;
+    border-radius: 0px 0px 6px 6px;
+}
+@media (max-width:1200px){
+    .contSignIn{
+        justify-content: center !important;
+    }
+    .img{
+        display: none;
+    }
+    .listSign  {
+        width: 90%;
+    }
+}
+
+/* Message */
+.massage {
+    top: 70px;
+    position: fixed;
+    display: flex;
+    z-index: 9999999999999999;
+    width: 100%;
+    justify-content: center;
+    margin: auto;
+    color: white;
+    font-weight: 900;
+    padding: 10px;
+}
+.error{
+    background-color: crimson;
+}
+.success{
+    background-color: rebeccapurple;
+    
+}

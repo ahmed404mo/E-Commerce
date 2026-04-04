@@ -1,0 +1,133 @@
+:root {
+  --primary-purple: #6200ea;
+  --dark-purple: #3700b3;
+  --accent-pink: #e91e63;
+  --text-dark: #212121;
+  --text-gray: #757575;
+  --bg-color: #f8f9fa;
+  --card-bg: #ffffff;
+}
+
+.contWidth {
+  max-width: 1200px;
+  margin: 150px auto 40px auto !important;
+  padding: 20px;
+  background: var(--bg-color);
+  border-radius: 14px;
+}
+
+.divlop {
+  margin-bottom: 30px !important;
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--primary-purple);
+  display: flex;
+  flex-direction: column !important;
+  text-align: center;
+}
+
+.displyFav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.itemss.spaceimn {
+  background: var(--card-bg);
+  border-radius: 14px;
+  border: 1px solid #ececf1;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease;
+  width: calc(33.33% - 20px) !important; 
+  min-width: 280px;
+}
+
+.itemss:hover {
+  transform: translateY(-5px);
+}
+
+.contItem {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  align-items: center;
+}
+
+.imhe {
+  position: relative;
+  width: 110px;
+  min-width: 110px;
+  height: 110px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.imhe img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mo {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  font-size: 18px;
+  color: #ccc;
+  cursor: pointer;
+}
+.mo.active { color: var(--accent-pink); }
+
+.off {
+  position: absolute;
+  right: 5px;
+  background: var(--accent-pink);
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+.desc h5 { margin: 0 0 8px; font-size: 16px; color: var(--text-dark); }
+.price { display: flex; gap: 10px; align-items: center; }
+.price p { font-weight: 700; margin: 0; }
+.price del { color: var(--text-gray); font-size: 13px; }
+.dis { color: #17a2b8; font-weight: 700; font-size: 13px; margin: 5px 0; }
+
+.bibyCard { margin-top: 10px; }
+.cardStyle {
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 800;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.addBtn { background: var(--primary-purple); color: #fff; }
+.removeBtn { background: #dc3545; color: #fff; }
+
+/* رسالة "لا يوجد مفضلات" */
+.notyet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  font-size: 18px;
+  color: var(--text-gray);
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .itemss.spaceimn { width: calc(50% - 20px) !important; }
+}
+
+@media (max-width: 768px) {
+  .contWidth { margin-top: 117px !important; }
+  .itemss.spaceimn { 
+    width: 100% !important; 
+    max-width: 350px;
+  }
+  .divlop { font-size: 24px; }
+}
