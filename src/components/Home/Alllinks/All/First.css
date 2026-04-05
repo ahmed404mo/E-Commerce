@@ -1,6 +1,5 @@
 /* First.css */
 
-/* ============ الألوان الأساسية ============ */
 :root {
   --primary-purple: #6200ea; 
   --dark-purple: #3700b3; 
@@ -11,7 +10,6 @@
   --bg-color: #f8f9fa; 
 }
 
-/* ============ الحاوية الرئيسية ============ */
 .home-wrapper {
   max-width: 1550px; 
   margin: 0 auto;
@@ -19,8 +17,9 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--bg-color);
   overflow-x: hidden; 
+  
+  min-height: 100vh; 
 }
-
 /* ============ Slider ============ */
 .hero-slider {
   border-radius: 16px;

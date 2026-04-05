@@ -72,3 +72,13 @@
     }
 
 }
+.btnone, .btntwo {
+    text-decoration: none !important; 
+    display: inline-block; 
+}
+.btnone{
+  background-color:#5f48f9 ;
+  padding: 10px 15px;
+  color: white;
+  border-radius: 10px;
+}
