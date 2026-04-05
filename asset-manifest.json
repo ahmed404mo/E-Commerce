@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/E-Commerce/static/css/main.1d10a04f.css",
-    "main.js": "/E-Commerce/static/js/main.e1d531d5.js",
+    "main.css": "/E-Commerce/static/css/main.62b5a7ca.css",
+    "main.js": "/E-Commerce/static/js/main.88dbf99a.js",
     "static/js/488.43a89883.chunk.js": "/E-Commerce/static/js/488.43a89883.chunk.js",
     "static/media/—Pngtree—star space series tablet case_15928700.png": "/E-Commerce/static/media/—Pngtree—star space series tablet case_15928700.8f02cc931b7f012915f8.png",
     "static/media/d38a65c7-a6e3-4c66-8133-e2ea236fc1a7.png": "/E-Commerce/static/media/d38a65c7-a6e3-4c66-8133-e2ea236fc1a7.5ad01fae9d9a63ced8cd.png",
@@ -27,12 +27,12 @@
     "static/media/unnamed.jpg": "/E-Commerce/static/media/unnamed.90b69d81a55006fdea9f.jpg",
     "static/media/fa-v4compatibility.woff2": "/E-Commerce/static/media/fa-v4compatibility.24fc9d217708cb3f0362.woff2",
     "index.html": "/E-Commerce/index.html",
-    "main.1d10a04f.css.map": "/E-Commerce/static/css/main.1d10a04f.css.map",
-    "main.e1d531d5.js.map": "/E-Commerce/static/js/main.e1d531d5.js.map",
+    "main.62b5a7ca.css.map": "/E-Commerce/static/css/main.62b5a7ca.css.map",
+    "main.88dbf99a.js.map": "/E-Commerce/static/js/main.88dbf99a.js.map",
     "488.43a89883.chunk.js.map": "/E-Commerce/static/js/488.43a89883.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d10a04f.css",
-    "static/js/main.e1d531d5.js"
+    "static/css/main.62b5a7ca.css",
+    "static/js/main.88dbf99a.js"
   ]
 }
