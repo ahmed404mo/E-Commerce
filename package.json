@@ -5,7 +5,7 @@
   "main": "electron.js",
   "author": "ahmed404mo",
   "description": "E-commerce React Application",
-  "homepage": "https://ahmed404mo.github.io/ecommerce",
+  "homepage": "https://ahmed404mo.github.io/E-Commerce",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.0.0",
     "@splidejs/react-splide": "^0.7.12",
@@ -13,6 +13,8 @@
     "@tsparticles/slim": "^3.9.1",
     "axios": "^1.12.1",
     "bootstrap": "^5.3.8",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.7.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-router-dom": "^7.8.0",
