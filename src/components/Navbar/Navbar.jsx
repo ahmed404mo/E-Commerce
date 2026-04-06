@@ -3,10 +3,19 @@ import { NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import React from "react";
 
+import { useAddCart } from "../Home/FunctionLove/AddCart"; 
+import { useLove } from "../Home/FunctionLove/Love";
+
 function Navbar() {
   const [move, setMove] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const navigate = useNavigate();
+
+  const { cart } = useAddCart();
+  const { act } = useLove();
+
+  const cartCount = Object.values(cart || {}).reduce((total, quantity) => total + quantity, 0);
+  const favCount = Object.values(act || {}).filter(Boolean).length;
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -19,6 +28,18 @@ function Navbar() {
   };
 
   const closeMenu = () => setMove(false);
+
+  const badgeStyle = {
+    backgroundColor: "#ff4d4d",
+    color: "white",
+    borderRadius: "50%",
+    padding: "2px 6px",
+    fontSize: "12px",
+    fontWeight: "bold",
+    marginLeft: "5px",
+    position: "relative",
+    top: "-2px"
+  };
 
   return (
     <>
@@ -49,9 +70,11 @@ function Navbar() {
             </NavLink>
             <NavLink className={({ isActive }) => isActive ? "btntwo activeLink" : "btntwo"} to="/favourite">
               <i className="fa-regular fa-heart marg"></i> Favourites
+              {favCount > 0 && <span style={badgeStyle}>{favCount}</span>}
             </NavLink>
             <NavLink className={({ isActive }) => isActive ? "btntwo activeLink" : "btntwo"} to="/cart">
               <i className="fas fa-shopping-cart marg"></i> Cart
+              {cartCount > 0 && <span style={badgeStyle}>{cartCount}</span>}
             </NavLink>
             <NavLink className={({ isActive }) => isActive ? "btntwo activeLink" : "btntwo"} to="/register">
               <i className="fa-solid fa-user marg"></i> Register
@@ -85,9 +108,11 @@ function Navbar() {
               </NavLink>
               <NavLink onClick={closeMenu} className="btntwo space" to="/favourite">
                 <i className="fa-regular fa-heart marg"></i> Favourites
+                {favCount > 0 && <span style={badgeStyle}>{favCount}</span>}
               </NavLink>
               <NavLink onClick={closeMenu} className="btntwo space" to="/cart">
                 <i className="fas fa-shopping-cart marg"></i> Cart
+                {cartCount > 0 && <span style={badgeStyle}>{cartCount}</span>}
               </NavLink>
               <NavLink onClick={closeMenu} className="btntwo space" to="/register">
                 <i className="fa-solid fa-user marg"></i> Register

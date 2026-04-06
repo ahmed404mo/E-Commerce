@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { Api } from "../AllApi/Api";
+import axios from "axios";
 import { useAddCart } from "../Home/FunctionLove/AddCart";
 import "./cart.css";
 import { useNavigate } from "react-router-dom";
 
 function AddCart() {
-  const { products } = Api();
-  const { cart, addToCart, removeFromCart, getTotalPrice } = useAddCart();
-
+  const { cart, addToCart, removeFromCart } = useAddCart();
   const [cartProducts, setCartProducts] = useState([]);
   const [success, setSuccess] = useState(false);
   const navigate = useNavigate();
@@ -30,11 +28,32 @@ function AddCart() {
   };
 
   useEffect(() => {
-    if (products && products.length > 0) {
-      const filtered = products.filter((p) => cart[p.id]);
-      setCartProducts(filtered);
-    }
-  }, [products, cart]);
+    const fetchCartItems = async () => {
+      const cartIds = Object.keys(cart); 
+      
+      if (cartIds.length === 0) {
+        setCartProducts([]);
+        return;
+      }
+
+      try {
+        const promises = cartIds.map((id) => axios.get(`https://dummyjson.com/products/${id}`));
+        const responses = await Promise.all(promises);
+        const items = responses.map((res) => res.data);
+        setCartProducts(items);
+      } catch (error) {
+        console.error("Error fetching cart items:", error);
+      }
+    };
+
+    fetchCartItems();
+  }, [cart]);
+
+  const calculateTotal = () => {
+    return cartProducts.reduce((total, item) => {
+      return total + (item.price * cart[item.id]);
+    }, 0);
+  };
 
   return (
     <div className="contWidth">
@@ -63,10 +82,7 @@ function AddCart() {
                       <div className="price">
                         <p>{p.price}$</p>
                         <del>
-                          {(p.price / (1 - p.discountPercentage / 100)).toFixed(
-                            2,
-                          )}
-                          $
+                          {(p.price / (1 - p.discountPercentage / 100)).toFixed(2)}$
                         </del>
                       </div>
 
@@ -74,10 +90,8 @@ function AddCart() {
                         <p className="dis">
                           Save:{" "}
                           {(
-                            p.price / (1 - p.discountPercentage / 100) -
-                            p.price
-                          ).toFixed(2)}
-                          $
+                            p.price / (1 - p.discountPercentage / 100) - p.price
+                          ).toFixed(2)}$
                         </p>
 
                         <div className="quantity-controls">
@@ -105,7 +119,7 @@ function AddCart() {
 
           <div className="cart-summary">
             <h3>
-              Total Price: <span>{getTotalPrice(products).toFixed(2)}$</span>
+              Total Price: <span>{calculateTotal().toFixed(2)}$</span>
             </h3>
 
             <div className="payment-card">
